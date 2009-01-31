@@ -1,0 +1,16 @@
+# http://shanesbrain.net/2008/7/9/using-xcode-with-git
+# xcode noise
+build/*
+*.pbxuser
+*.mode1v3
+
+# old skool
+.svn
+
+# osx noise
+.DS_Store
+profile
+
+# Emacs
+*.h#
+
