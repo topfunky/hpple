@@ -31,8 +31,10 @@ See TFHppleHTMLTest.m in the Hpple project for samples.
 <pre>
 #import "Hpple.h"
 
-NSData * data      = [NSData dataWithContentsOfFile:@"index.html"];
-NSArray * elements = [doc search:@"//a[@class='sponsor']"];
+NSData  * data      = [NSData dataWithContentsOfFile:@"index.html"];
+
+TFHpple * doc       = [[TFHpple alloc] initWithHTMLData:data];
+NSArray * elements  = [doc search:@"//a[@class='sponsor']"];
 
 TFHppleElement * element = [elements objectAtIndex:0];
 [e content];              // Tag's innerHTML
