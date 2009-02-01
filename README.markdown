@@ -29,7 +29,7 @@ More documentation and short screencast coming soon...
 See TFHppleHTMLTest.m in the Hpple project for samples.
 
 <pre>
-#import "Hpple.h"
+#import "TFHpple.h"
 
 NSData  * data      = [NSData dataWithContentsOfFile:@"index.html"];
 
