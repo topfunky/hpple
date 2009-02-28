@@ -16,7 +16,6 @@
 		75D785D30F34E06F00173CB6 /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D785CE0F34E06F00173CB6 /* GTMSenTestCase.m */; };
 		75D785D40F34E06F00173CB6 /* GTMIPhoneUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D785D00F34E06F00173CB6 /* GTMIPhoneUnitTestMain.m */; };
 		75D785D50F34E06F00173CB6 /* GTMIPhoneUnitTestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D785D10F34E06F00173CB6 /* GTMIPhoneUnitTestDelegate.m */; };
-		75D785FA0F34E1D400173CB6 /* TFHppleHTMLTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D785F90F34E1D400173CB6 /* TFHppleHTMLTest.m */; };
 		75D786010F34E2FE00173CB6 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D786000F34E2FE00173CB6 /* TFHpple.m */; };
 		75D786020F34E2FE00173CB6 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D786000F34E2FE00173CB6 /* TFHpple.m */; };
 		75D786330F34E89200173CB6 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D786310F34E89200173CB6 /* XPathQuery.m */; };
@@ -25,6 +24,8 @@
 		75D786370F34E8A600173CB6 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D786350F34E8A600173CB6 /* libxml2.2.dylib */; };
 		75D786930F34F14500173CB6 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D786920F34F14500173CB6 /* TFHppleElement.m */; };
 		75D786940F34F14500173CB6 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D786920F34F14500173CB6 /* TFHppleElement.m */; };
+		75DBA7150F5906E200E7EE78 /* TFHppleHTMLTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 75DBA7140F5906E200E7EE78 /* TFHppleHTMLTest.m */; };
+		75DBA71A0F59070A00E7EE78 /* TFHppleXMLTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 75DBA7190F59070A00E7EE78 /* TFHppleXMLTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +46,6 @@
 		75D785D10F34E06F00173CB6 /* GTMIPhoneUnitTestDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMIPhoneUnitTestDelegate.m; sourceTree = "<group>"; };
 		75D785D20F34E06F00173CB6 /* GTMIPhoneUnitTestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMIPhoneUnitTestDelegate.h; sourceTree = "<group>"; };
 		75D785D60F34E07D00173CB6 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
-		75D785F90F34E1D400173CB6 /* TFHppleHTMLTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleHTMLTest.m; sourceTree = "<group>"; };
 		75D785FF0F34E2FE00173CB6 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
 		75D786000F34E2FE00173CB6 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
 		75D786310F34E89200173CB6 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
@@ -53,6 +53,8 @@
 		75D786350F34E8A600173CB6 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
 		75D786910F34F14500173CB6 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
 		75D786920F34F14500173CB6 /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
+		75DBA7140F5906E200E7EE78 /* TFHppleHTMLTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TFHppleHTMLTest.m; path = UnitTesting/TFHppleHTMLTest.m; sourceTree = "<group>"; };
+		75DBA7190F59070A00E7EE78 /* TFHppleXMLTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TFHppleXMLTest.m; path = UnitTesting/TFHppleXMLTest.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,8 +158,9 @@
 		75D7859E0F34DF4800173CB6 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				75DBA7190F59070A00E7EE78 /* TFHppleXMLTest.m */,
+				75DBA7140F5906E200E7EE78 /* TFHppleHTMLTest.m */,
 				75D785A90F34DFBE00173CB6 /* GTM */,
-				75D785F90F34E1D400173CB6 /* TFHppleHTMLTest.m */,
 			);
 			name = Test;
 			sourceTree = "<group>";
@@ -294,10 +297,11 @@
 				75D785D30F34E06F00173CB6 /* GTMSenTestCase.m in Sources */,
 				75D785D40F34E06F00173CB6 /* GTMIPhoneUnitTestMain.m in Sources */,
 				75D785D50F34E06F00173CB6 /* GTMIPhoneUnitTestDelegate.m in Sources */,
-				75D785FA0F34E1D400173CB6 /* TFHppleHTMLTest.m in Sources */,
 				75D786020F34E2FE00173CB6 /* TFHpple.m in Sources */,
 				75D786340F34E89200173CB6 /* XPathQuery.m in Sources */,
 				75D786940F34F14500173CB6 /* TFHppleElement.m in Sources */,
+				75DBA7150F5906E200E7EE78 /* TFHppleHTMLTest.m in Sources */,
+				75DBA71A0F59070A00E7EE78 /* TFHppleXMLTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +409,7 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				PREBINDING = NO;
 				SDKROOT = iphoneos2.2.1;
 			};

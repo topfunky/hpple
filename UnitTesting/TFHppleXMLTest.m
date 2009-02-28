@@ -31,22 +31,22 @@
 #import "GTMSenTestCase.h"
 #import "TFHpple.h"
 
-#define TEST_HTML_DOCUMENT_PATH @"UnitTesting/TestData/index.html"
+#define TEST_DOCUMENT_PATH @"UnitTesting/TestData/feed.rss"
 
-@interface TFHppleHTMLTest : GTMTestCase
+@interface TFHppleXMLTest : GTMTestCase
 {
   TFHpple * doc;
 }
 @end
 
-@implementation TFHppleHTMLTest
+@implementation TFHppleXMLTest
 
 - (void) dealloc { [super dealloc]; }
 
 - (void) setUp
 {
-  NSData * data = [NSData dataWithContentsOfFile:TEST_HTML_DOCUMENT_PATH];
-  doc = [[TFHpple alloc] initWithHTMLData:data];
+  NSData * data = [NSData dataWithContentsOfFile:TEST_DOCUMENT_PATH];
+  doc = [[TFHpple alloc] initWithXMLData:data];
 }
 
 - (void) tearDown
@@ -54,66 +54,51 @@
   [doc release];
 }
 
-- (void) testInitializesWithHTMLData
+- (void) testInitializesWithXMLData
 {
   STAssertNotNil(doc.data, nil);
   STAssertEqualObjects([doc className], @"TFHpple", nil);
 }
 
-//  doc.search("//p[@class='posted']")
+//  item/title,description,link
 - (void) testSearchesWithXPath
 {
-  NSArray * a = [doc search:@"//a[@class='sponsor']"];
-  STAssertEquals((int)[a count], 2, nil);
+  NSArray * items = [doc search:@"//item"];
+  STAssertEquals((int)[items count], 0x0f, nil);
 
-  TFHppleElement * e = [a objectAtIndex:0];
+  TFHppleElement * e = [items objectAtIndex:0];
   STAssertEqualObjects([e className], @"TFHppleElement", nil);
 }
 
 - (void) testFindsFirstElementAtXPath
 {
-  TFHppleElement * e = [doc at:@"//a[@class='sponsor']"];
+  TFHppleElement * e = [doc at:@"//item/title"];
 
-  STAssertEqualObjects([e content], @"RailsMachine", nil);
-  STAssertEqualObjects([e tagName], @"a", nil);
+  STAssertEqualObjects([e content], @"Objective-C for Rubyists", nil);
+  STAssertEqualObjects([e tagName], @"title", nil);
 }
 
 - (void) testSearchesByNestedXPath
 {
-  NSArray * a = [doc search:@"//div[@class='column']//strong"];
-  STAssertEquals((int)[a count], 5, nil);
-  
-  TFHppleElement * e = [a objectAtIndex:0];
-  STAssertEqualObjects([e content], @"PeepCode", nil);
+  NSArray * elements = [doc search:@"//item/title"];
+  STAssertEquals((int)[elements count], 0x0f, nil); 
+ 
+  TFHppleElement * e = [elements objectAtIndex:0];
+  STAssertEqualObjects([e content], @"Objective-C for Rubyists", nil);
 }
 
-- (void) testPopulatesAttributes
+- (void) testAtSafelyReturnsNilIfEmpty
 {
   TFHppleElement * e = [doc at:@"//a[@class='sponsor']"];
   
-  STAssertEqualObjects([[e attributes] className], @"NSCFDictionary", nil);
-  STAssertEqualObjects([[e attributes] objectForKey:@"href"], @"http://railsmachine.com/", nil);
+  STAssertEqualObjects(e, nil, nil);
 }
 
-- (void) testProvidesEasyAccessToAttributes
-{
-  TFHppleElement * e = [doc at:@"//a[@class='sponsor']"];
-  
-  STAssertEqualObjects([e objectForKey:@"href"], @"http://railsmachine.com/", nil);
-}
-
+// Other Hpricot methods:
 //  doc.at("body")['onload']
-
-
 //  (doc/"#elementID").inner_html
-
-
 //  (doc/"#elementID").to_html
-
 //  doc.at("div > div:nth(1)").css_path
-
 //  doc.at("div > div:nth(1)").xpath
-
-
 
 @end
