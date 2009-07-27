@@ -64,7 +64,12 @@
 // Returns all elements at xPath.
 - (NSArray *) search:(NSString *)xPathOrCSS
 {
-  NSArray * detailNodes = PerformHTMLXPathQuery(data, xPathOrCSS);
+  NSArray * detailNodes;
+  if (isXML) {
+    detailNodes = PerformXMLXPathQuery(data, xPathOrCSS);
+  } else {
+	detailNodes = PerformHTMLXPathQuery(data, xPathOrCSS);
+  }
 
   NSMutableArray * hppleElements = [NSMutableArray array];
   for (id node in detailNodes)
