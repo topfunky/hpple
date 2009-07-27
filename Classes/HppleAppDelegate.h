@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HppleAppDelegate : NSObject <UIApplicationDelegate> {
-    UIWindow *window;
+@interface HppleAppDelegate : NSObject <UIApplicationDelegate> 
+{
+  UIWindow *window;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;

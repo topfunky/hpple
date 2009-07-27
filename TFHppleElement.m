@@ -40,7 +40,7 @@ NSString * const TFHppleNodeAttributeNameKey     = @"attributeName";
 - (void) dealloc
 {
   [node release];
-  
+
   [super dealloc];
 }
 
@@ -51,7 +51,7 @@ NSString * const TFHppleNodeAttributeNameKey     = @"attributeName";
 
   [theNode retain];
   node = theNode;
-  
+
   return self;
 }
 
@@ -70,9 +70,8 @@ NSString * const TFHppleNodeAttributeNameKey     = @"attributeName";
 - (NSDictionary *) attributes
 {
   NSMutableDictionary * translatedAttributes = [NSMutableDictionary dictionary];
-  for (NSDictionary * attributeDict in [node objectForKey:TFHppleNodeAttributeArrayKey])
-  {
-    [translatedAttributes setObject:[attributeDict objectForKey:TFHppleNodeContentKey] 
+  for (NSDictionary * attributeDict in [node objectForKey:TFHppleNodeAttributeArrayKey]) {
+    [translatedAttributes setObject:[attributeDict objectForKey:TFHppleNodeContentKey]
                              forKey:[attributeDict objectForKey:TFHppleNodeAttributeNameKey]];
   }
   return translatedAttributes;

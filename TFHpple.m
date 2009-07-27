@@ -44,11 +44,11 @@
 {
   if (!(self = [super init]))
     return nil;
-  
+
   self.data = theData;
   isXML = isDataXML;
-  
-  return self;  
+
+  return self;
 }
 
 - (id) initWithXMLData:(NSData *)theData
@@ -68,17 +68,16 @@
   if (isXML) {
     detailNodes = PerformXMLXPathQuery(data, xPathOrCSS);
   } else {
-	detailNodes = PerformHTMLXPathQuery(data, xPathOrCSS);
+    detailNodes = PerformHTMLXPathQuery(data, xPathOrCSS);
   }
 
   NSMutableArray * hppleElements = [NSMutableArray array];
-  for (id node in detailNodes)
-  {
+  for (id node in detailNodes) {
     TFHppleElement * e = [[TFHppleElement alloc] initWithNode:node];
     [hppleElements addObject:e];
     [e release];
   }
-  return hppleElements;  
+  return hppleElements;
 }
 
 // Returns first element at xPath
@@ -87,7 +86,7 @@
   NSArray * elements = [self search:xPathOrCSS];
   if ([elements count] >= 1)
     return [elements objectAtIndex:0];
-  
+
   return nil;
 }
 

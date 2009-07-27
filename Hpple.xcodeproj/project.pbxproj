@@ -321,6 +321,7 @@
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = Hpple;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CD1F1B03-3E48-4552-ABEF-FDFFFA2F6956";
+				SDKROOT = iphoneos3.0;
 			};
 			name = Debug;
 		};
@@ -356,7 +357,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = Test;
-				SDKROOT = iphoneos2.2.1;
+				SDKROOT = iphoneos3.0;
 			};
 			name = Debug;
 		};

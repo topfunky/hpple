@@ -13,16 +13,20 @@
 @synthesize window;
 
 
-- (void)applicationDidFinishLaunching:(UIApplication *)application {    
+- (void)applicationDidFinishLaunching:(UIApplication *)application
+{
 
-    // Override point for customization after application launch
-    [window makeKeyAndVisible];
+  // Override point for customization after application launch
+  [window makeKeyAndVisible];
+
+  // TODO: Make a demo app that shows how it works.
 }
 
 
-- (void)dealloc {
-    [window release];
-    [super dealloc];
+- (void)dealloc
+{
+  [window release];
+  [super dealloc];
 }
 
 
