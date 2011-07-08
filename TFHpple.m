@@ -88,9 +88,7 @@
 
   NSMutableArray * hppleElements = [NSMutableArray array];
   for (id node in detailNodes) {
-    TFHppleElement * e = [[TFHppleElement alloc] initWithNode:node];
-    [hppleElements addObject:e];
-    [e release];
+    [hppleElements addObject:[TFHppleElement hppleElementWithNode:node]];
   }
   return hppleElements;
 }
