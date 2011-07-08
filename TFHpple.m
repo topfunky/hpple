@@ -45,7 +45,8 @@
   if (!(self = [super init]))
     return nil;
 
-  self.data = theData;
+  [theData retain];
+  data = theData;
   isXML = isDataXML;
 
   return self;
@@ -64,7 +65,7 @@
 // Returns all elements at xPath.
 - (NSArray *) search:(NSString *)xPathOrCSS
 {
-  NSArray * detailNodes;
+  NSArray * detailNodes = nil;
   if (isXML) {
     detailNodes = PerformXMLXPathQuery(data, xPathOrCSS);
   } else {

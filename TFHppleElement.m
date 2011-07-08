@@ -40,7 +40,6 @@ NSString * const TFHppleNodeAttributeNameKey     = @"attributeName";
 - (void) dealloc
 {
   [node release];
-
   [super dealloc];
 }
 

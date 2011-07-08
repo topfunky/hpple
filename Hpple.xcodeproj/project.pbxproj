@@ -119,7 +119,6 @@
 			children = (
 				32CA4F630368D1EE00C91783 /* Hpple_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
-				75D786350F34E8A600173CB6 /* libxml2.2.dylib */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -136,6 +135,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				75D786350F34E8A600173CB6 /* libxml2.2.dylib */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
