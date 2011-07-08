@@ -39,8 +39,13 @@
 }
 
 - (id) initWithData:(NSData *)theData isXML:(BOOL)isDataXML;
-- (id) initWithHTMLData:(NSData *)theData;
 - (id) initWithXMLData:(NSData *)theData;
+- (id) initWithHTMLData:(NSData *)theData;
+
++ (TFHpple *) hppleWithData:(NSData *)theData isXML:(BOOL)isDataXML;
++ (TFHpple *) hppleWithXMLData:(NSData *)theData;
++ (TFHpple *) hppleWithHTMLData:(NSData *)theData;
+
 - (NSArray *) searchWithXPathQuery:(NSString *)xPathOrCSS;
 - (TFHppleElement *) peekAtSearchWithXPathQuery:(NSString *)xPathOrCSS;
 

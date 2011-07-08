@@ -62,6 +62,20 @@
   return [self initWithData:theData isXML:NO];
 }
 
++ (TFHpple *) hppleWithData:(NSData *)theData isXML:(BOOL)isDataXML {
+	return [[[[self class] alloc] initWithData:theData isXML:isDataXML] autorelease];
+}
+
++ (TFHpple *) hppleWithHTMLData:(NSData *)theData {
+	return [[self class] hppleWithData:theData isXML:NO];
+}
+
++ (TFHpple *) hppleWithXMLData:(NSData *)theData {
+	return [[self class] hppleWithData:theData isXML:YES];
+}
+
+#pragma mark -
+
 // Returns all elements at xPath.
 - (NSArray *) searchWithXPathQuery:(NSString *)xPathOrCSS
 {
