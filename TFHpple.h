@@ -41,8 +41,8 @@
 - (id) initWithData:(NSData *)theData isXML:(BOOL)isDataXML;
 - (id) initWithHTMLData:(NSData *)theData;
 - (id) initWithXMLData:(NSData *)theData;
-- (NSArray *) search:(NSString *)xPathOrCSS;
-- (TFHppleElement *) at:(NSString *)xPathOrCSS;
+- (NSArray *) searchWithXPathQuery:(NSString *)xPathOrCSS;
+- (TFHppleElement *) peekAtSearchWithXPathQuery:(NSString *)xPathOrCSS;
 
 @property (retain) NSData * data;
 

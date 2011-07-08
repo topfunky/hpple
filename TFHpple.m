@@ -63,7 +63,7 @@
 }
 
 // Returns all elements at xPath.
-- (NSArray *) search:(NSString *)xPathOrCSS
+- (NSArray *) searchWithXPathQuery:(NSString *)xPathOrCSS
 {
   NSArray * detailNodes = nil;
   if (isXML) {
@@ -82,9 +82,9 @@
 }
 
 // Returns first element at xPath
-- (TFHppleElement *) at:(NSString *)xPathOrCSS
+- (TFHppleElement *) peekAtSearchWithXPathQuery:(NSString *)xPathOrCSS
 {
-  NSArray * elements = [self search:xPathOrCSS];
+  NSArray * elements = [self searchWithXPathQuery:xPathOrCSS];
   if ([elements count] >= 1)
     return [elements objectAtIndex:0];
 
