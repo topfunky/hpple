@@ -30,10 +30,10 @@
 
 #import "TFHppleElement.h"
 
-NSString * const TFHppleNodeContentKey           = @"nodeContent";
-NSString * const TFHppleNodeNameKey              = @"nodeName";
-NSString * const TFHppleNodeAttributeArrayKey    = @"nodeAttributeArray";
-NSString * const TFHppleNodeAttributeNameKey     = @"attributeName";
+static NSString * const TFHppleNodeContentKey           = @"nodeContent";
+static NSString * const TFHppleNodeNameKey              = @"nodeName";
+static NSString * const TFHppleNodeAttributeArrayKey    = @"nodeAttributeArray";
+static NSString * const TFHppleNodeAttributeNameKey     = @"attributeName";
 
 @implementation TFHppleElement
 
