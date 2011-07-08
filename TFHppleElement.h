@@ -37,6 +37,8 @@
 
 - (id) initWithNode:(NSDictionary *) theNode;
 
++ (TFHppleElement *) hppleElementWithNode:(NSDictionary *) theNode;
+
 // Returns this tag's innerHTML content.
 - (NSString *) content;
 

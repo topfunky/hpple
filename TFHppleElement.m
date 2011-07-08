@@ -54,6 +54,11 @@ static NSString * const TFHppleNodeAttributeNameKey     = @"attributeName";
   return self;
 }
 
++ (TFHppleElement *) hppleElementWithNode:(NSDictionary *) theNode {
+	return [[[[self class] alloc] initWithName:theNode] autorelease];
+}
+
+#pragma mark -
 
 - (NSString *) content
 {
