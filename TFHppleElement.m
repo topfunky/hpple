@@ -76,8 +76,7 @@ static NSString * const TFHppleNodeAttributeNameKey     = @"attributeName";
 {
   NSMutableArray *children = [NSMutableArray array];
   for (NSDictionary *child in [node objectForKey:TFHppleNodeChildrenKey]) {
-    TFHppleElement *element = [TFHppleElement hppleElementWithNode:child];
-    [children addObject:element];
+    [children addObject:[TFHppleElement hppleElementWithNode:child]];
   }
   return children;
 }
