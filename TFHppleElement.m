@@ -32,6 +32,7 @@
 
 static NSString * const TFHppleNodeContentKey           = @"nodeContent";
 static NSString * const TFHppleNodeNameKey              = @"nodeName";
+static NSString * const TFHppleNodeChildrenKey          = @"nodeChildArray";
 static NSString * const TFHppleNodeAttributeArrayKey    = @"nodeAttributeArray";
 static NSString * const TFHppleNodeAttributeNameKey     = @"attributeName";
 
@@ -69,6 +70,16 @@ static NSString * const TFHppleNodeAttributeNameKey     = @"attributeName";
 - (NSString *) tagName
 {
   return [node objectForKey:TFHppleNodeNameKey];
+}
+
+- (NSArray *) children
+{
+  NSMutableArray *children = [NSMutableArray array];
+  for (NSDictionary *child in [node objectForKey:TFHppleNodeChildrenKey]) {
+    TFHppleElement *element = [TFHppleElement hppleElementWithNode:child];
+    [children addObject:element];
+  }
+  return children;
 }
 
 - (NSDictionary *) attributes

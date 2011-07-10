@@ -50,6 +50,9 @@
 //   class = 'highlight'
 - (NSDictionary *) attributes;
 
+// Returns the children of a given node
+- (NSArray *) children;
+
 // Provides easy access to the content of a specific attribute, 
 // such as 'href' or 'class'.
 - (NSString *) objectForKey:(NSString *) theKey;
