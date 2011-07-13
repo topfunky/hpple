@@ -36,11 +36,17 @@ static NSString * const TFHppleNodeChildrenKey          = @"nodeChildArray";
 static NSString * const TFHppleNodeAttributeArrayKey    = @"nodeAttributeArray";
 static NSString * const TFHppleNodeAttributeNameKey     = @"attributeName";
 
+@interface TFHppleElement ()
+@property (nonatomic, retain, readwrite) TFHppleElement *parent;
+@end
+
 @implementation TFHppleElement
+@synthesize parent;
 
 - (void) dealloc
 {
   [node release];
+  [parent release];
   [super dealloc];
 }
 
@@ -76,7 +82,9 @@ static NSString * const TFHppleNodeAttributeNameKey     = @"attributeName";
 {
   NSMutableArray *children = [NSMutableArray array];
   for (NSDictionary *child in [node objectForKey:TFHppleNodeChildrenKey]) {
-    [children addObject:[TFHppleElement hppleElementWithNode:child]];
+      TFHppleElement *element = [TFHppleElement hppleElementWithNode:child];
+      element.parent = self;
+      [children addObject:element];
   }
   return children;
 }
