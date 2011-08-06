@@ -47,6 +47,10 @@
 //   class = 'highlight'
 - (NSDictionary *) attributes;
 
+// Return sub elements
+// http://sh3ng.com
+- (NSArray *) childNodes;
+
 // Provides easy access to the content of a specific attribute, 
 // such as 'href' or 'class'.
 - (NSString *) objectForKey:(NSString *) theKey;
