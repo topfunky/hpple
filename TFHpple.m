@@ -42,8 +42,9 @@
 
 - (id) initWithData:(NSData *)theData isXML:(BOOL)isDataXML
 {
-  if (!(self = [super init]))
+  if (!(self = [super init])) {
     return nil;
+  }
 
   [theData retain];
   data = theData;
@@ -63,15 +64,15 @@
 }
 
 + (TFHpple *) hppleWithData:(NSData *)theData isXML:(BOOL)isDataXML {
-	return [[[[self class] alloc] initWithData:theData isXML:isDataXML] autorelease];
+  return [[[[self class] alloc] initWithData:theData isXML:isDataXML] autorelease];
 }
 
 + (TFHpple *) hppleWithHTMLData:(NSData *)theData {
-	return [[self class] hppleWithData:theData isXML:NO];
+  return [[self class] hppleWithData:theData isXML:NO];
 }
 
 + (TFHpple *) hppleWithXMLData:(NSData *)theData {
-	return [[self class] hppleWithData:theData isXML:YES];
+  return [[self class] hppleWithData:theData isXML:YES];
 }
 
 #pragma mark -
@@ -97,8 +98,9 @@
 - (TFHppleElement *) peekAtSearchWithXPathQuery:(NSString *)xPathOrCSS
 {
   NSArray * elements = [self searchWithXPathQuery:xPathOrCSS];
-  if ([elements count] >= 1)
+  if ([elements count] >= 1) {
     return [elements objectAtIndex:0];
+  }
 
   return nil;
 }

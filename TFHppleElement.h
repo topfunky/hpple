@@ -53,6 +53,9 @@
 // Returns the children of a given node
 @property (nonatomic, readonly) NSArray *children;
 
+// Returns the first child of a given node
+@property (nonatomic, readonly) TFHppleElement *firstChild;
+
 // the parent of a node
 @property (nonatomic, retain, readonly) TFHppleElement *parent;
 

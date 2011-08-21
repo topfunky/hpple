@@ -62,7 +62,7 @@ static NSString * const TFHppleNodeAttributeNameKey     = @"attributeName";
 }
 
 + (TFHppleElement *) hppleElementWithNode:(NSDictionary *) theNode {
-	return [[[[self class] alloc] initWithNode:theNode] autorelease];
+  return [[[[self class] alloc] initWithNode:theNode] autorelease];
 }
 
 #pragma mark -
@@ -88,6 +88,15 @@ static NSString * const TFHppleNodeAttributeNameKey     = @"attributeName";
   }
   return children;
 }
+
+- (TFHppleElement *) firstChild
+{
+  NSArray * children = self.children;
+  if (children.count)
+    return [children objectAtIndex:0];
+  return nil;
+}
+
 
 - (NSDictionary *) attributes
 {
