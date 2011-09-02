@@ -42,10 +42,12 @@
 
 - (id) initWithData:(NSData *)theData isXML:(BOOL)isDataXML
 {
-  if (!(self = [super init]))
+  if (!(self = [super init])) {
     return nil;
+  }
 
-  self.data = theData;
+  [theData retain];
+  data = theData;
   isXML = isDataXML;
 
   return self;
@@ -61,10 +63,24 @@
   return [self initWithData:theData isXML:NO];
 }
 
++ (TFHpple *) hppleWithData:(NSData *)theData isXML:(BOOL)isDataXML {
+  return [[[[self class] alloc] initWithData:theData isXML:isDataXML] autorelease];
+}
+
++ (TFHpple *) hppleWithHTMLData:(NSData *)theData {
+  return [[self class] hppleWithData:theData isXML:NO];
+}
+
++ (TFHpple *) hppleWithXMLData:(NSData *)theData {
+  return [[self class] hppleWithData:theData isXML:YES];
+}
+
+#pragma mark -
+
 // Returns all elements at xPath.
-- (NSArray *) search:(NSString *)xPathOrCSS
+- (NSArray *) searchWithXPathQuery:(NSString *)xPathOrCSS
 {
-  NSArray * detailNodes;
+  NSArray * detailNodes = nil;
   if (isXML) {
     detailNodes = PerformXMLXPathQuery(data, xPathOrCSS);
   } else {
@@ -73,19 +89,18 @@
 
   NSMutableArray * hppleElements = [NSMutableArray array];
   for (id node in detailNodes) {
-    TFHppleElement * e = [[TFHppleElement alloc] initWithNode:node];
-    [hppleElements addObject:e];
-    [e release];
+    [hppleElements addObject:[TFHppleElement hppleElementWithNode:node]];
   }
   return hppleElements;
 }
 
 // Returns first element at xPath
-- (TFHppleElement *) at:(NSString *)xPathOrCSS
+- (TFHppleElement *) peekAtSearchWithXPathQuery:(NSString *)xPathOrCSS
 {
-  NSArray * elements = [self search:xPathOrCSS];
-  if ([elements count] >= 1)
+  NSArray * elements = [self searchWithXPathQuery:xPathOrCSS];
+  if ([elements count] >= 1) {
     return [elements objectAtIndex:0];
+  }
 
   return nil;
 }

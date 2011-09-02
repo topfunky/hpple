@@ -30,17 +30,23 @@
 
 #import "TFHppleElement.h"
 
-NSString * const TFHppleNodeContentKey           = @"nodeContent";
-NSString * const TFHppleNodeNameKey              = @"nodeName";
-NSString * const TFHppleNodeAttributeArrayKey    = @"nodeAttributeArray";
-NSString * const TFHppleNodeAttributeNameKey     = @"attributeName";
+static NSString * const TFHppleNodeContentKey           = @"nodeContent";
+static NSString * const TFHppleNodeNameKey              = @"nodeName";
+static NSString * const TFHppleNodeChildrenKey          = @"nodeChildArray";
+static NSString * const TFHppleNodeAttributeArrayKey    = @"nodeAttributeArray";
+static NSString * const TFHppleNodeAttributeNameKey     = @"attributeName";
+
+@interface TFHppleElement ()
+@property (nonatomic, retain, readwrite) TFHppleElement *parent;
+@end
 
 @implementation TFHppleElement
+@synthesize parent;
 
 - (void) dealloc
 {
   [node release];
-
+  [parent release];
   [super dealloc];
 }
 
@@ -55,6 +61,11 @@ NSString * const TFHppleNodeAttributeNameKey     = @"attributeName";
   return self;
 }
 
++ (TFHppleElement *) hppleElementWithNode:(NSDictionary *) theNode {
+  return [[[[self class] alloc] initWithNode:theNode] autorelease];
+}
+
+#pragma mark -
 
 - (NSString *) content
 {
@@ -66,6 +77,26 @@ NSString * const TFHppleNodeAttributeNameKey     = @"attributeName";
 {
   return [node objectForKey:TFHppleNodeNameKey];
 }
+
+- (NSArray *) children
+{
+  NSMutableArray *children = [NSMutableArray array];
+  for (NSDictionary *child in [node objectForKey:TFHppleNodeChildrenKey]) {
+      TFHppleElement *element = [TFHppleElement hppleElementWithNode:child];
+      element.parent = self;
+      [children addObject:element];
+  }
+  return children;
+}
+
+- (TFHppleElement *) firstChild
+{
+  NSArray * children = self.children;
+  if (children.count)
+    return [children objectAtIndex:0];
+  return nil;
+}
+
 
 - (NSDictionary *) attributes
 {
