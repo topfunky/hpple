@@ -31,21 +31,33 @@
 
 
 @interface TFHppleElement : NSObject {
+@private
   NSDictionary * node;
 }
 
 - (id) initWithNode:(NSDictionary *) theNode;
 
++ (TFHppleElement *) hppleElementWithNode:(NSDictionary *) theNode;
+
 // Returns this tag's innerHTML content.
-- (NSString *) content;
+@property (nonatomic, readonly) NSString *content;
 
 // Returns the name of the current tag, such as "h3".
-- (NSString *) tagName;
+@property (nonatomic, readonly) NSString *tagName;
 
 // Returns tag attributes with name as key and content as value.
 //   href  = 'http://peepcode.com'
 //   class = 'highlight'
-- (NSDictionary *) attributes;
+@property (nonatomic, readonly) NSDictionary *attributes;
+
+// Returns the children of a given node
+@property (nonatomic, readonly) NSArray *children;
+
+// Returns the first child of a given node
+@property (nonatomic, readonly) TFHppleElement *firstChild;
+
+// the parent of a node
+@property (nonatomic, retain, readonly) TFHppleElement *parent;
 
 // Provides easy access to the content of a specific attribute, 
 // such as 'href' or 'class'.
