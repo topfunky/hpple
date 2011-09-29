@@ -121,6 +121,7 @@ NSArray *PerformXPathQuery(xmlDocPtr doc, NSString *query)
   xpathObj = xmlXPathEvalExpression((xmlChar *)[query cStringUsingEncoding:NSUTF8StringEncoding], xpathCtx);
   if(xpathObj == NULL) {
     NSLog(@"Unable to evaluate XPath.");
+    xmlXPathFreeContext(xpathCtx);
     return nil;
   }
 
@@ -128,6 +129,8 @@ NSArray *PerformXPathQuery(xmlDocPtr doc, NSString *query)
   if (!nodes)
     {
       NSLog(@"Nodes was nil.");
+      xmlXPathFreeObject(xpathObj);
+      xmlXPathFreeContext(xpathCtx);
       return nil;
     }
 
