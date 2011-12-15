@@ -32,6 +32,7 @@
 
 @interface TFHppleElement : NSObject {
 @private
+  
   NSDictionary * node;
   TFHppleElement *parent;
 }
