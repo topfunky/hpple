@@ -14,10 +14,10 @@
 #import <libxml/xpath.h>
 #import <libxml/xpathInternals.h>
 
-NSDictionary *DictionaryForNode(xmlNodePtr currentNode, NSMutableDictionary *parentResult);
+NSDictionary *DictionaryForNode(xmlNodePtr currentNode, NSMutableDictionary *parentResult,BOOL parentContent);
 NSArray *PerformXPathQuery(xmlDocPtr doc, NSString *query);
 
-NSDictionary *DictionaryForNode(xmlNodePtr currentNode, NSMutableDictionary *parentResult)
+NSDictionary *DictionaryForNode(xmlNodePtr currentNode, NSMutableDictionary *parentResult,BOOL parentContent)
 {
   NSMutableDictionary *resultForNode = [NSMutableDictionary dictionary];
 
@@ -35,15 +35,21 @@ NSDictionary *DictionaryForNode(xmlNodePtr currentNode, NSMutableDictionary *par
 
       if ([[resultForNode objectForKey:@"nodeName"] isEqual:@"text"] && parentResult)
         {
-          [parentResult
-            setObject:
-              [currentNodeContent
-                stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]
-            forKey:@"nodeContent"];
-          return nil;
-        }
+            if(parentContent)
+            {
+                [parentResult setObject:[currentNodeContent stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] forKey:@"nodeContent"];
+                return nil;
+            }
+            [resultForNode setObject:currentNodeContent forKey:@"nodeContent"];
+//            NSLog(@"content: %@",currentNodeContent);
+            return resultForNode;
 
-      [resultForNode setObject:currentNodeContent forKey:@"nodeContent"];
+        }
+      else {
+          [resultForNode setObject:currentNodeContent forKey:@"nodeContent"];          
+      }
+
+
     }
 
   xmlAttr *attribute = currentNode->properties;
@@ -57,12 +63,13 @@ NSDictionary *DictionaryForNode(xmlNodePtr currentNode, NSMutableDictionary *par
             [NSString stringWithCString:(const char *)attribute->name encoding:NSUTF8StringEncoding];
           if (attributeName)
             {
+//                NSLog(@"Attribute Name Set: %@",attributeName);
               [attributeDictionary setObject:attributeName forKey:@"attributeName"];
             }
 
           if (attribute->children)
             {
-              NSDictionary *childDictionary = DictionaryForNode(attribute->children, attributeDictionary);
+              NSDictionary *childDictionary = DictionaryForNode(attribute->children, attributeDictionary,true);
               if (childDictionary)
                 {
                   [attributeDictionary setObject:childDictionary forKey:@"attributeContent"];
@@ -88,7 +95,7 @@ NSDictionary *DictionaryForNode(xmlNodePtr currentNode, NSMutableDictionary *par
       NSMutableArray *childContentArray = [NSMutableArray array];
       while (childNode)
         {
-          NSDictionary *childDictionary = DictionaryForNode(childNode, resultForNode);
+          NSDictionary *childDictionary = DictionaryForNode(childNode, resultForNode,false);
           if (childDictionary)
             {
               [childContentArray addObject:childDictionary];
@@ -137,7 +144,7 @@ NSArray *PerformXPathQuery(xmlDocPtr doc, NSString *query)
   NSMutableArray *resultNodes = [NSMutableArray array];
   for (NSInteger i = 0; i < nodes->nodeNr; i++)
     {
-      NSDictionary *nodeDictionary = DictionaryForNode(nodes->nodeTab[i], nil);
+      NSDictionary *nodeDictionary = DictionaryForNode(nodes->nodeTab[i], nil,false);
       if (nodeDictionary)
         {
           [resultNodes addObject:nodeDictionary];
