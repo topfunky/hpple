@@ -37,32 +37,25 @@ static NSString * const TFHppleNodeAttributeArrayKey    = @"nodeAttributeArray";
 static NSString * const TFHppleNodeAttributeNameKey     = @"attributeName";
 
 @interface TFHppleElement ()
-@property (nonatomic, retain, readwrite) TFHppleElement *parent;
+@property (nonatomic, unsafe_unretained, readwrite) TFHppleElement *parent;
 @end
 
 @implementation TFHppleElement
 @synthesize parent;
 
-- (void) dealloc
-{
-  [node release];
-  [parent release];
-  [super dealloc];
-}
 
 - (id) initWithNode:(NSDictionary *) theNode
 {
   if (!(self = [super init]))
     return nil;
 
-  [theNode retain];
   node = theNode;
 
   return self;
 }
 
 + (TFHppleElement *) hppleElementWithNode:(NSDictionary *) theNode {
-  return [[[[self class] alloc] initWithNode:theNode] autorelease];
+  return [[[self class] alloc] initWithNode:theNode];
 }
 
 #pragma mark -
