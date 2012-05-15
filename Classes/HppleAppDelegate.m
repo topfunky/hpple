@@ -23,11 +23,6 @@
 }
 
 
-- (void)dealloc
-{
-  [window release];
-  [super dealloc];
-}
 
 
 @end

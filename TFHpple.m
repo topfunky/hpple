@@ -34,11 +34,6 @@
 
 @synthesize data;
 
-- (void) dealloc
-{
-  [data release];
-  [super dealloc];
-}
 
 - (id) initWithData:(NSData *)theData isXML:(BOOL)isDataXML
 {
@@ -46,7 +41,6 @@
     return nil;
   }
 
-  [theData retain];
   data = theData;
   isXML = isDataXML;
 
@@ -64,7 +58,7 @@
 }
 
 + (TFHpple *) hppleWithData:(NSData *)theData isXML:(BOOL)isDataXML {
-  return [[[[self class] alloc] initWithData:theData isXML:isDataXML] autorelease];
+  return [[[self class] alloc] initWithData:theData isXML:isDataXML];
 }
 
 + (TFHpple *) hppleWithHTMLData:(NSData *)theData {
