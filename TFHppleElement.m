@@ -95,8 +95,10 @@ static NSString * const TFHppleNodeAttributeNameKey     = @"attributeName";
 {
   NSMutableDictionary * translatedAttributes = [NSMutableDictionary dictionary];
   for (NSDictionary * attributeDict in [node objectForKey:TFHppleNodeAttributeArrayKey]) {
-    [translatedAttributes setObject:[attributeDict objectForKey:TFHppleNodeContentKey]
-                             forKey:[attributeDict objectForKey:TFHppleNodeAttributeNameKey]];
+      if ([attributeDict objectForKey:TFHppleNodeContentKey] && [attributeDict objectForKey:TFHppleNodeAttributeNameKey]) {
+          [translatedAttributes setObject:[attributeDict objectForKey:TFHppleNodeContentKey]
+                                   forKey:[attributeDict objectForKey:TFHppleNodeAttributeNameKey]];
+      }
   }
   return translatedAttributes;
 }
