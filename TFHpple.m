@@ -58,7 +58,7 @@
 }
 
 + (TFHpple *) hppleWithData:(NSData *)theData isXML:(BOOL)isDataXML {
-  return [[[self class] alloc] initWithData:theData isXML:isDataXML];
+  return [[[[self class] alloc] initWithData:theData isXML:isDataXML] autorelease];
 }
 
 + (TFHpple *) hppleWithHTMLData:(NSData *)theData {
