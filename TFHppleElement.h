@@ -61,8 +61,33 @@
 // the parent of a node
 @property (nonatomic, unsafe_unretained, readonly) TFHppleElement *parent;
 
+// Returns YES if the node has any child
+// This is more efficient than using the children property since no NSArray is constructed
+- (BOOL)hasChildren;
+
+// Returns YES if this is a text node
+- (BOOL)isTextNode;
+
 // Provides easy access to the content of a specific attribute, 
 // such as 'href' or 'class'.
 - (NSString *) objectForKey:(NSString *) theKey;
+
+// Returns the children whose tag name equals the given string
+// (comparison is performed with NSString's isEqualToString)
+// Returns an empty array if no matching child is found
+- (NSArray *) childrenWithTagName:(NSString *)tagName;
+
+// Returns the first child node whose tag name equals the given string
+// (comparison is performed with NSString's isEqualToString)
+// Returns nil if no matching child is found
+- (TFHppleElement *) firstChildWithTagName:(NSString *)tagName;
+
+// Returns the first text node from this element's children
+// Returns nil if there is no text node among the children
+- (TFHppleElement *) firstTextChild;
+
+// Returns the string contained by the first text node from this element's children
+// Convenience method which can be used instead of firstTextChild.content
+- (NSString *) text;
 
 @end
