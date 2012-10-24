@@ -1,14 +1,14 @@
 # DESCRIPTION
 
-EXPERIMENTAL! Only a few hours old.
-
 Hpple: A nice Objective-C wrapper on the XPathQuery library for parsing HTML.
 
 Inspired by why the lucky stiff's [Hpricot](http://github.com/why/hpricot/tree/master).
 
-# AUTHOR
+# CREDITS
 
-Geoffrey Grosenbach, [Topfunky Corporation](http://topfunky.com) and [PeepCode Screencasts](http://peepcode.com).
+Hpple was created by Geoffrey Grosenbach, [Topfunky Corporation](http://topfunky.com) and [PeepCode Screencasts](http://peepcode.com).
+
+[Contributors](https://github.com/topfunky/hpple/graphs/contributors)
 
 # FEATURES
 
@@ -37,10 +37,11 @@ TFHpple * doc       = [[TFHpple alloc] initWithHTMLData:data];
 NSArray * elements  = [doc search:@"//a[@class='sponsor']"];
 
 TFHppleElement * element = [elements objectAtIndex:0];
-[e content];              // Tag's innerHTML
-[e tagName];              // "a"
-[e attributes];           // NSDictionary of href, class, id, etc.
-[e objectForKey:@"href"]; // Easy access to single attribute
+[e text];                       // The text inside the HTML element (the content of the first text node)
+[e tagName];                    // "a"
+[e attributes];                 // NSDictionary of href, class, id, etc.
+[e objectForKey:@"href"];       // Easy access to single attribute
+[e firstChildWithTagName:@"b"]; // The first "b" child node
 
 </pre>
 
