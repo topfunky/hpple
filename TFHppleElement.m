@@ -157,6 +157,30 @@ static NSString * const TFHppleTextNodeName            = @"text";
     return nil;
 }
 
+- (NSArray*) childrenWithClassName:(NSString*)className
+{
+    NSMutableArray* matches = [NSMutableArray array];
+    
+    for (TFHppleElement* child in self.children)
+    {
+        if ([[child objectForKey:@"class"] isEqualToString:className])
+            [matches addObject:child];
+    }
+    
+    return matches;
+}
+
+- (TFHppleElement *) firstChildWithClassName:(NSString*)className
+{
+    for (TFHppleElement* child in self.children)
+    {
+        if ([[child objectForKey:@"class"] isEqualToString:className])
+            return child;
+    }
+    
+    return nil;
+}
+
 - (TFHppleElement *) firstTextChild;
 {
     for (TFHppleElement* child in self.children)
