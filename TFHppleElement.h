@@ -82,6 +82,16 @@
 // Returns nil if no matching child is found
 - (TFHppleElement *) firstChildWithTagName:(NSString *)tagName;
 
+// Returns the children whose class equals the given string
+// (comparison is performed with NSString's isEqualToString)
+// Returns an empty array if no matching child is found
+- (NSArray *) childrenWithClassName:(NSString *)className;
+
+// Returns the first child whose class requals the given string
+// (comparison is performed with NSString's isEqualToString)
+// Returns nil if no matching child is found
+- (TFHppleElement *) firstChildWithClassName:(NSString*)className;
+
 // Returns the first text node from this element's children
 // Returns nil if there is no text node among the children
 - (TFHppleElement *) firstTextChild;
