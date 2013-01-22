@@ -41,6 +41,7 @@
 
 + (TFHppleElement *) hppleElementWithNode:(NSDictionary *) theNode;
 
+@property (nonatomic, copy, readonly) NSString *raw;
 // Returns this tag's innerHTML content.
 @property (nonatomic, copy, readonly) NSString *content;
 
