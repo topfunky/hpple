@@ -62,6 +62,11 @@ static NSString * const TFHppleTextNodeName            = @"text";
 
 #pragma mark -
 
+- (NSString *)raw
+{
+    return [node objectForKey:@"raw"];
+}
+
 - (NSString *) content
 {
   return [node objectForKey:TFHppleNodeContentKey];
