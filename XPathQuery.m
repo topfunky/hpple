@@ -168,38 +168,52 @@ NSArray *PerformXPathQuery(xmlDocPtr doc, NSString *query)
 
 NSArray *PerformHTMLXPathQuery(NSData *document, NSString *query)
 {
-  xmlDocPtr doc;
+    return PerformHTMLXPathQueryWithEncoding(document, query, nil);
+}
 
-  /* Load XML document */
-  doc = htmlReadMemory([document bytes], (int)[document length], "", NULL, HTML_PARSE_NOWARNING | HTML_PARSE_NOERROR);
+NSArray *PerformHTMLXPathQueryWithEncoding(NSData *document, NSString *query,NSString *encoding)
+{
+    xmlDocPtr doc;
 
-  if (doc == NULL)
+    /* Load XML document */
+    const char *encoded = encoding ? [encoding cStringUsingEncoding:NSUTF8StringEncoding] : NULL;
+
+    doc = htmlReadMemory([document bytes], (int)[document length], "", encoded, HTML_PARSE_NOWARNING | HTML_PARSE_NOERROR);
+    
+    if (doc == NULL)
     {
-      NSLog(@"Unable to parse.");
-      return nil;
+        NSLog(@"Unable to parse.");
+        return nil;
     }
-
-  NSArray *result = PerformXPathQuery(doc, query);
-  xmlFreeDoc(doc);
-
-  return result;
+    
+    NSArray *result = PerformXPathQuery(doc, query);
+    xmlFreeDoc(doc);
+    
+    return result;
 }
 
 NSArray *PerformXMLXPathQuery(NSData *document, NSString *query)
 {
-  xmlDocPtr doc;
+    return PerformXMLXPathQueryWithEncoding(document, query, nil);
+}
 
-  /* Load XML document */
-  doc = xmlReadMemory([document bytes], (int)[document length], "", NULL, XML_PARSE_RECOVER);
+NSArray *PerformXMLXPathQueryWithEncoding(NSData *document, NSString *query,NSString *encoding)
+{
+    xmlDocPtr doc;
+    
+    /* Load XML document */
+    const char *encoded = encoding ? [encoding cStringUsingEncoding:NSUTF8StringEncoding] : NULL;
 
-  if (doc == NULL)
+    doc = xmlReadMemory([document bytes], (int)[document length], "", encoded, XML_PARSE_RECOVER);
+    
+    if (doc == NULL)
     {
-      NSLog(@"Unable to parse.");
-      return nil;
+        NSLog(@"Unable to parse.");
+        return nil;
     }
-
-  NSArray *result = PerformXPathQuery(doc, query);
-  xmlFreeDoc(doc);
-
-  return result;
+    
+    NSArray *result = PerformXPathQuery(doc, query);
+    xmlFreeDoc(doc);
+    
+    return result;
 }
