@@ -30,9 +30,20 @@
 #import "TFHpple.h"
 #import "XPathQuery.h"
 
+@interface TFHpple ()
+{
+    NSData * data;
+    NSString * encoding;
+    BOOL isXML;
+}
+
+@end
+
+
 @implementation TFHpple
 
 @synthesize data;
+@synthesize encoding;
 
 
 - (id) initWithData:(NSData *)theData encoding:(NSString *)theEncoding isXML:(BOOL)isDataXML
