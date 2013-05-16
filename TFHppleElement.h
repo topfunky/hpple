@@ -30,12 +30,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface TFHppleElement : NSObject {
-@private
-  
-  NSDictionary * node;
-  __unsafe_unretained TFHppleElement *parent;
-}
+@interface TFHppleElement : NSObject 
 
 - (id) initWithNode:(NSDictionary *) theNode;
 

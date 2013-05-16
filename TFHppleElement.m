@@ -39,7 +39,13 @@ static NSString * const TFHppleNodeAttributeNameKey     = @"attributeName";
 static NSString * const TFHppleTextNodeName            = @"text";
 
 @interface TFHppleElement ()
+{    
+    NSDictionary * node;
+    __unsafe_unretained TFHppleElement *parent;
+}
+
 @property (nonatomic, unsafe_unretained, readwrite) TFHppleElement *parent;
+
 @end
 
 @implementation TFHppleElement
@@ -186,7 +192,7 @@ static NSString * const TFHppleTextNodeName            = @"text";
     return nil;
 }
 
-- (TFHppleElement *) firstTextChild;
+- (TFHppleElement *) firstTextChild
 {
     for (TFHppleElement* child in self.children)
     {

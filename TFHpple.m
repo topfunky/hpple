@@ -30,6 +30,15 @@
 #import "TFHpple.h"
 #import "XPathQuery.h"
 
+@interface TFHpple ()
+{
+    NSData * data;
+    BOOL isXML;
+}
+
+@end
+
+
 @implementation TFHpple
 
 @synthesize data;
