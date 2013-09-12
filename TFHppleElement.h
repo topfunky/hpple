@@ -30,11 +30,11 @@
 #import <Foundation/Foundation.h>
 
 
-@interface TFHppleElement : NSObject 
+@interface TFHppleElement : NSObject
 
-- (id) initWithNode:(NSDictionary *) theNode;
+- (id) initWithNode:(NSDictionary *) theNode isXML:(BOOL)isDataXML withEncoding:(NSString *)theEncoding;
 
-+ (TFHppleElement *) hppleElementWithNode:(NSDictionary *) theNode;
++ (TFHppleElement *) hppleElementWithNode:(NSDictionary *) theNode isXML:(BOOL)isDataXML withEncoding:(NSString *)theEncoding;
 
 @property (nonatomic, copy, readonly) NSString *raw;
 // Returns this tag's innerHTML content.
@@ -95,5 +95,9 @@
 // Returns the string contained by the first text node from this element's children
 // Convenience method which can be used instead of firstTextChild.content
 - (NSString *) text;
+
+// Returns elements searched with xpath
+- (NSArray *) searchWithXPathQuery:(NSString *)xPathOrCSS;
+
 
 @end
