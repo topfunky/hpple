@@ -122,7 +122,7 @@
 
   NSMutableArray * hppleElements = [NSMutableArray array];
   for (id node in detailNodes) {
-    [hppleElements addObject:[TFHppleElement hppleElementWithNode:node]];
+    [hppleElements addObject:[TFHppleElement hppleElementWithNode:node isXML:isXML withEncoding:encoding]];
   }
   return hppleElements;
 }
