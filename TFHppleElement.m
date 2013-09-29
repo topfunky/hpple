@@ -140,6 +140,17 @@ static NSString * const TFHppleTextNodeName            = @"text";
         return NO;
 }
 
+- (BOOL)hasClass:(NSString *)class;
+{
+	NSString *wholeClass = [NSString stringWithFormat:@" %@ ", [self objectForKey:@"class"]];
+	NSString *targetClass = [NSString stringWithFormat:@" %@ ", class];
+	
+	if ([wholeClass rangeOfString:targetClass].location != NSNotFound)
+        return YES;
+    else
+        return NO;
+}
+
 - (BOOL)isTextNode
 {
     // we must distinguish between real text nodes and standard nodes with tha name "text" (<text>)
@@ -180,7 +191,7 @@ static NSString * const TFHppleTextNodeName            = @"text";
     
     for (TFHppleElement* child in self.children)
     {
-        if ([[child objectForKey:@"class"] isEqualToString:className])
+        if ([child hasClass:className])
             [matches addObject:child];
     }
     
@@ -191,7 +202,7 @@ static NSString * const TFHppleTextNodeName            = @"text";
 {
     for (TFHppleElement* child in self.children)
     {
-        if ([[child objectForKey:@"class"] isEqualToString:className])
+        if ([child hasClass:className])
             return child;
     }
     

@@ -61,6 +61,9 @@
 // This is more efficient than using the children property since no NSArray is constructed
 - (BOOL)hasChildren;
 
+// Returns YES if the node has a given class
+- (BOOL)hasClass:(NSString *)class;
+
 // Returns YES if this is a text node
 - (BOOL)isTextNode;
 
@@ -78,13 +81,13 @@
 // Returns nil if no matching child is found
 - (TFHppleElement *) firstChildWithTagName:(NSString *)tagName;
 
-// Returns the children whose class equals the given string
-// (comparison is performed with NSString's isEqualToString)
+// Returns the children who have the given class
+// (comparison is performed with "hasClass:" method)
 // Returns an empty array if no matching child is found
 - (NSArray *) childrenWithClassName:(NSString *)className;
 
-// Returns the first child whose class requals the given string
-// (comparison is performed with NSString's isEqualToString)
+// Returns the first child who has the given class
+// (comparison is performed with "hasClass:" method)
 // Returns nil if no matching child is found
 - (TFHppleElement *) firstChildWithClassName:(NSString*)className;
 
