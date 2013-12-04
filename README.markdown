@@ -51,5 +51,3 @@ TFHppleElement * element = [elements objectAtIndex:0];
 * CSS3 selectors in addition to XPath
 
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/premedios/hpple/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
