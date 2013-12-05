@@ -99,5 +99,8 @@
 // Returns elements searched with xpath
 - (NSArray *) searchWithXPathQuery:(NSString *)xPathOrCSS;
 
+// Custom keyed subscripting
+- (id)objectForKeyedSubscript:(id)key;
+
 
 @end

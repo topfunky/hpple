@@ -234,4 +234,10 @@ static NSString * const TFHppleTextNodeName            = @"text";
     return hppleElements;
 }
 
+// Custom keyed subscripting
+- (id)objectForKeyedSubscript:(id)key
+{
+    return [self objectForKey:key];
+}
+
 @end
