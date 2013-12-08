@@ -56,6 +56,7 @@
 		75DBA7140F5906E200E7EE78 /* TFHppleHTMLTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TFHppleHTMLTest.m; path = UnitTesting/TFHppleHTMLTest.m; sourceTree = "<group>"; };
 		75DBA7190F59070A00E7EE78 /* TFHppleXMLTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TFHppleXMLTest.m; path = UnitTesting/TFHppleXMLTest.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D01899DB1854774400B68539 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +120,7 @@
 			children = (
 				32CA4F630368D1EE00C91783 /* Hpple_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
+				D01899DB1854774400B68539 /* .travis.yml */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -230,6 +232,8 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Hpple" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
