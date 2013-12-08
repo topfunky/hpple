@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/premedios/hpple.png)](https://travis-ci.org/premedios/hpple)
+
 # DESCRIPTION
 
 Hpple: A nice Objective-C wrapper on the XPathQuery library for parsing HTML.
