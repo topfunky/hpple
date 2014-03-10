@@ -129,6 +129,12 @@ NSArray *PerformXPathQuery(xmlDocPtr doc, NSString *query)
   xmlXPathContextPtr xpathCtx;
   xmlXPathObjectPtr xpathObj;
 
+  /* Make sure that passed query is non-nil and is NSString object */
+  if (query == nil || ![query isKindOfClass:[NSString class]]) 
+  {
+    return nil;
+  }
+  
   /* Create xpath evaluation context */
   xpathCtx = xmlXPathNewContext(doc);
   if(xpathCtx == NULL)
