@@ -9,6 +9,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/topfunky/hpple.git", :tag => s.version.to_s }
   s.source_files  = '{TFHpple,TFHppleElement,XPathQuery}.{h,m}'
   s.ios.libraries = 'xml2'
-  s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
+  s.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(SDKROOT)/usr/include/libxml2"' }
   s.requires_arc = true
 end
