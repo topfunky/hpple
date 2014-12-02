@@ -1,0 +1,500 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AD210CE81A249B34007EB02E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD210CE71A249B34007EB02E /* main.m */; };
+		AD210CEB1A249B34007EB02E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD210CEA1A249B34007EB02E /* AppDelegate.m */; };
+		AD210CEE1A249B34007EB02E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD210CED1A249B34007EB02E /* ViewController.m */; };
+		AD210CF11A249B34007EB02E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD210CEF1A249B34007EB02E /* Main.storyboard */; };
+		AD210CF31A249B34007EB02E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD210CF21A249B34007EB02E /* Images.xcassets */; };
+		AD210CF61A249B34007EB02E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD210CF41A249B34007EB02E /* LaunchScreen.xib */; };
+		AD210D121A249C13007EB02E /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = AD210D0D1A249C13007EB02E /* TFHpple.m */; };
+		AD210D131A249C13007EB02E /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = AD210D0F1A249C13007EB02E /* TFHppleElement.m */; };
+		AD210D141A249C13007EB02E /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = AD210D111A249C13007EB02E /* XPathQuery.m */; };
+		AD210D161A249C4A007EB02E /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AD210D151A249C4A007EB02E /* libxml2.dylib */; };
+		AD210D1D1A249D73007EB02E /* feed.rss in Resources */ = {isa = PBXBuildFile; fileRef = AD210D191A249D73007EB02E /* feed.rss */; };
+		AD210D1E1A249D73007EB02E /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = AD210D1A1A249D73007EB02E /* index.html */; };
+		AD210D1F1A249D73007EB02E /* TFHppleHTMLTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AD210D1B1A249D73007EB02E /* TFHppleHTMLTest.m */; };
+		AD210D201A249D73007EB02E /* TFHppleXMLTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AD210D1C1A249D73007EB02E /* TFHppleXMLTest.m */; };
+		AD210D221A24A06D007EB02E /* TFHppleStringTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AD210D211A24A06C007EB02E /* TFHppleStringTest.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AD210CFC1A249B34007EB02E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD210CDA1A249B34007EB02E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD210CE11A249B34007EB02E;
+			remoteInfo = HppleDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AD210CE21A249B34007EB02E /* HppleDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HppleDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD210CE61A249B34007EB02E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD210CE71A249B34007EB02E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AD210CE91A249B34007EB02E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AD210CEA1A249B34007EB02E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AD210CEC1A249B34007EB02E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AD210CED1A249B34007EB02E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AD210CF01A249B34007EB02E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AD210CF21A249B34007EB02E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AD210CF51A249B34007EB02E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		AD210CFB1A249B34007EB02E /* HppleDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HppleDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD210D001A249B34007EB02E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD210D0C1A249C13007EB02E /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TFHpple.h; path = ../Pod/Classes/TFHpple.h; sourceTree = "<group>"; };
+		AD210D0D1A249C13007EB02E /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TFHpple.m; path = ../Pod/Classes/TFHpple.m; sourceTree = "<group>"; };
+		AD210D0E1A249C13007EB02E /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TFHppleElement.h; path = ../Pod/Classes/TFHppleElement.h; sourceTree = "<group>"; };
+		AD210D0F1A249C13007EB02E /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TFHppleElement.m; path = ../Pod/Classes/TFHppleElement.m; sourceTree = "<group>"; };
+		AD210D101A249C13007EB02E /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XPathQuery.h; path = ../Pod/Classes/XPathQuery.h; sourceTree = "<group>"; };
+		AD210D111A249C13007EB02E /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XPathQuery.m; path = ../Pod/Classes/XPathQuery.m; sourceTree = "<group>"; };
+		AD210D151A249C4A007EB02E /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		AD210D191A249D73007EB02E /* feed.rss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = feed.rss; sourceTree = "<group>"; };
+		AD210D1A1A249D73007EB02E /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		AD210D1B1A249D73007EB02E /* TFHppleHTMLTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleHTMLTest.m; sourceTree = "<group>"; };
+		AD210D1C1A249D73007EB02E /* TFHppleXMLTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleXMLTest.m; sourceTree = "<group>"; };
+		AD210D211A24A06C007EB02E /* TFHppleStringTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleStringTest.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AD210CDF1A249B34007EB02E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD210D161A249C4A007EB02E /* libxml2.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD210CF81A249B34007EB02E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AD210CD91A249B34007EB02E = {
+			isa = PBXGroup;
+			children = (
+				AD210D0B1A249C05007EB02E /* Hpple */,
+				AD210CE41A249B34007EB02E /* HppleDemo */,
+				AD210CFE1A249B34007EB02E /* HppleDemoTests */,
+				AD210CE31A249B34007EB02E /* Products */,
+				AD210D171A249C7A007EB02E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AD210CE31A249B34007EB02E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AD210CE21A249B34007EB02E /* HppleDemo.app */,
+				AD210CFB1A249B34007EB02E /* HppleDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AD210CE41A249B34007EB02E /* HppleDemo */ = {
+			isa = PBXGroup;
+			children = (
+				AD210CE91A249B34007EB02E /* AppDelegate.h */,
+				AD210CEA1A249B34007EB02E /* AppDelegate.m */,
+				AD210CEC1A249B34007EB02E /* ViewController.h */,
+				AD210CED1A249B34007EB02E /* ViewController.m */,
+				AD210CEF1A249B34007EB02E /* Main.storyboard */,
+				AD210CF21A249B34007EB02E /* Images.xcassets */,
+				AD210CF41A249B34007EB02E /* LaunchScreen.xib */,
+				AD210CE51A249B34007EB02E /* Supporting Files */,
+			);
+			path = HppleDemo;
+			sourceTree = "<group>";
+		};
+		AD210CE51A249B34007EB02E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AD210CE61A249B34007EB02E /* Info.plist */,
+				AD210CE71A249B34007EB02E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AD210CFE1A249B34007EB02E /* HppleDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				AD210D181A249D73007EB02E /* TestData */,
+				AD210D1B1A249D73007EB02E /* TFHppleHTMLTest.m */,
+				AD210D1C1A249D73007EB02E /* TFHppleXMLTest.m */,
+				AD210D211A24A06C007EB02E /* TFHppleStringTest.m */,
+				AD210CFF1A249B34007EB02E /* Supporting Files */,
+			);
+			path = HppleDemoTests;
+			sourceTree = "<group>";
+		};
+		AD210CFF1A249B34007EB02E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AD210D001A249B34007EB02E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AD210D0B1A249C05007EB02E /* Hpple */ = {
+			isa = PBXGroup;
+			children = (
+				AD210D0C1A249C13007EB02E /* TFHpple.h */,
+				AD210D0D1A249C13007EB02E /* TFHpple.m */,
+				AD210D0E1A249C13007EB02E /* TFHppleElement.h */,
+				AD210D0F1A249C13007EB02E /* TFHppleElement.m */,
+				AD210D101A249C13007EB02E /* XPathQuery.h */,
+				AD210D111A249C13007EB02E /* XPathQuery.m */,
+			);
+			name = Hpple;
+			sourceTree = "<group>";
+		};
+		AD210D171A249C7A007EB02E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD210D151A249C4A007EB02E /* libxml2.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AD210D181A249D73007EB02E /* TestData */ = {
+			isa = PBXGroup;
+			children = (
+				AD210D191A249D73007EB02E /* feed.rss */,
+				AD210D1A1A249D73007EB02E /* index.html */,
+			);
+			path = TestData;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AD210CE11A249B34007EB02E /* HppleDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD210D051A249B34007EB02E /* Build configuration list for PBXNativeTarget "HppleDemo" */;
+			buildPhases = (
+				AD210CDE1A249B34007EB02E /* Sources */,
+				AD210CDF1A249B34007EB02E /* Frameworks */,
+				AD210CE01A249B34007EB02E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HppleDemo;
+			productName = HppleDemo;
+			productReference = AD210CE21A249B34007EB02E /* HppleDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AD210CFA1A249B34007EB02E /* HppleDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD210D081A249B34007EB02E /* Build configuration list for PBXNativeTarget "HppleDemoTests" */;
+			buildPhases = (
+				AD210CF71A249B34007EB02E /* Sources */,
+				AD210CF81A249B34007EB02E /* Frameworks */,
+				AD210CF91A249B34007EB02E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AD210CFD1A249B34007EB02E /* PBXTargetDependency */,
+			);
+			name = HppleDemoTests;
+			productName = HppleDemoTests;
+			productReference = AD210CFB1A249B34007EB02E /* HppleDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AD210CDA1A249B34007EB02E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				TargetAttributes = {
+					AD210CE11A249B34007EB02E = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					AD210CFA1A249B34007EB02E = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = AD210CE11A249B34007EB02E;
+					};
+				};
+			};
+			buildConfigurationList = AD210CDD1A249B34007EB02E /* Build configuration list for PBXProject "HppleDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AD210CD91A249B34007EB02E;
+			productRefGroup = AD210CE31A249B34007EB02E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AD210CE11A249B34007EB02E /* HppleDemo */,
+				AD210CFA1A249B34007EB02E /* HppleDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AD210CE01A249B34007EB02E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD210CF11A249B34007EB02E /* Main.storyboard in Resources */,
+				AD210CF61A249B34007EB02E /* LaunchScreen.xib in Resources */,
+				AD210CF31A249B34007EB02E /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD210CF91A249B34007EB02E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD210D1D1A249D73007EB02E /* feed.rss in Resources */,
+				AD210D1E1A249D73007EB02E /* index.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AD210CDE1A249B34007EB02E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD210CEE1A249B34007EB02E /* ViewController.m in Sources */,
+				AD210CEB1A249B34007EB02E /* AppDelegate.m in Sources */,
+				AD210CE81A249B34007EB02E /* main.m in Sources */,
+				AD210D121A249C13007EB02E /* TFHpple.m in Sources */,
+				AD210D141A249C13007EB02E /* XPathQuery.m in Sources */,
+				AD210D131A249C13007EB02E /* TFHppleElement.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD210CF71A249B34007EB02E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD210D221A24A06D007EB02E /* TFHppleStringTest.m in Sources */,
+				AD210D1F1A249D73007EB02E /* TFHppleHTMLTest.m in Sources */,
+				AD210D201A249D73007EB02E /* TFHppleXMLTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AD210CFD1A249B34007EB02E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD210CE11A249B34007EB02E /* HppleDemo */;
+			targetProxy = AD210CFC1A249B34007EB02E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AD210CEF1A249B34007EB02E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD210CF01A249B34007EB02E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AD210CF41A249B34007EB02E /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD210CF51A249B34007EB02E /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AD210D031A249B34007EB02E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AD210D041A249B34007EB02E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AD210D061A249B34007EB02E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SDKROOT)/usr/include/libxml2",
+				);
+				INFOPLIST_FILE = HppleDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AD210D071A249B34007EB02E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SDKROOT)/usr/include/libxml2",
+				);
+				INFOPLIST_FILE = HppleDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AD210D091A249B34007EB02E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HppleDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HppleDemo.app/HppleDemo";
+			};
+			name = Debug;
+		};
+		AD210D0A1A249B34007EB02E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HppleDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HppleDemo.app/HppleDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AD210CDD1A249B34007EB02E /* Build configuration list for PBXProject "HppleDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD210D031A249B34007EB02E /* Debug */,
+				AD210D041A249B34007EB02E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD210D051A249B34007EB02E /* Build configuration list for PBXNativeTarget "HppleDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD210D061A249B34007EB02E /* Debug */,
+				AD210D071A249B34007EB02E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD210D081A249B34007EB02E /* Build configuration list for PBXNativeTarget "HppleDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD210D091A249B34007EB02E /* Debug */,
+				AD210D0A1A249B34007EB02E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AD210CDA1A249B34007EB02E /* Project object */;
+}

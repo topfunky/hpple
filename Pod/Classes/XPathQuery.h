@@ -6,6 +6,8 @@
 //  Copyright 2008 __MyCompanyName__. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
+
 NSArray *PerformHTMLXPathQuery(NSData *document, NSString *query);
 NSArray *PerformHTMLXPathQueryWithEncoding(NSData *document, NSString *query,NSString *encoding);
 NSArray *PerformXMLXPathQuery(NSData *document, NSString *query);
