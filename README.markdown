@@ -20,7 +20,7 @@ Hpple was created by Geoffrey Grosenbach, [Topfunky Corporation](http://topfunky
 
 # INSTALLATION
 
-* Open your XCode project and the Hpple project.
+* Open your Xcode project and the Hpple project.
 * Drag the "Hpple" directory to your project.
 * Add the libxml2.2.dylib framework to your project and search paths as described at [Cocoa with Love](http://cocoawithlove.com/2008/10/using-libxml2-for-parsing-and-xpath.html)
 
