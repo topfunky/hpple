@@ -34,11 +34,13 @@ NSDictionary *DictionaryForNode(xmlNodePtr currentNode, NSMutableDictionary *par
             if (parentContent) {
                 NSCharacterSet *charactersToTrim = [NSCharacterSet whitespaceAndNewlineCharacterSet];
                 parentResult[@"nodeContent"] = [currentNodeContent stringByTrimmingCharactersInSet:charactersToTrim];
+                xmlFree(nodeContent);
                 return nil;
             }
             if (currentNodeContent != nil) {
                 resultForNode[@"nodeContent"] = currentNodeContent;
             }
+            xmlFree(nodeContent);
             return resultForNode;
         } else {
             resultForNode[@"nodeContent"] = currentNodeContent;
