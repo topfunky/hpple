@@ -30,7 +30,7 @@ More documentation and short screencast coming soon...
 
 See TFHppleHTMLTest.m in the Hpple project for samples.
 
-<pre>
+```objc
 #import "TFHpple.h"
 
 NSData  * data      = [NSData dataWithContentsOfFile:@"index.html"];
@@ -44,8 +44,7 @@ TFHppleElement * element = [elements objectAtIndex:0];
 [e attributes];                 // NSDictionary of href, class, id, etc.
 [e objectForKey:@"href"];       // Easy access to single attribute
 [e firstChildWithTagName:@"b"]; // The first "b" child node
-
-</pre>
+```
 
 # TODO
 
