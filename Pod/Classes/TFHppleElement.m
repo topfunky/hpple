@@ -234,6 +234,17 @@ static NSString * const TFHppleTextNodeName            = @"text";
     return hppleElements;
 }
 
+// Returns first element at xPath
+- (TFHppleElement *) peekAtSearchWithXPathQuery:(NSString *)xPathOrCSS
+{
+  NSArray * elements = [self searchWithXPathQuery:xPathOrCSS];
+  if ([elements count] >= 1) {
+    return [elements objectAtIndex:0];
+  }
+
+  return nil;
+}
+
 // Custom keyed subscripting
 - (id)objectForKeyedSubscript:(id)key
 {
