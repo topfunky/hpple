@@ -30,6 +30,9 @@ NSDictionary *DictionaryForNode(xmlNodePtr currentNode, NSMutableDictionary *par
     if (nodeContent != NULL) {
         NSString *currentNodeContent = [NSString stringWithCString:(const char *)nodeContent
                                                           encoding:NSUTF8StringEncoding];
+        if (currentNodeContent == nil) {
+            currentNodeContent = @"";
+        }
         if ([resultForNode[@"nodeName"] isEqual:@"text"] && parentResult) {
             if (parentContent) {
                 NSCharacterSet *charactersToTrim = [NSCharacterSet whitespaceAndNewlineCharacterSet];
