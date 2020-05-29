@@ -33,9 +33,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TFHppleElement : NSObject
 
-- (id) initWithNode:(NSDictionary *) theNode isXML:(BOOL)isDataXML withEncoding:(NSString *)theEncoding;
+- (id) initWithNode:(NSDictionary *) theNode isXML:(BOOL)isDataXML withEncoding:(nullable NSString *)theEncoding;
 
-+ (TFHppleElement *) hppleElementWithNode:(NSDictionary *) theNode isXML:(BOOL)isDataXML withEncoding:(NSString *)theEncoding;
++ (TFHppleElement *) hppleElementWithNode:(NSDictionary *) theNode isXML:(BOOL)isDataXML withEncoding:(nullable NSString *)theEncoding;
 
 @property (nonatomic, copy, readonly) NSString *raw;
 // Returns this tag's innerHTML content.
@@ -72,7 +72,7 @@ NS_ASSUME_NONNULL_BEGIN
 // Returns the children whose tag name equals the given string
 // (comparison is performed with NSString's isEqualToString)
 // Returns an empty array if no matching child is found
-- (NSArray *) childrenWithTagName:(NSString *)tagName;
+- (NSArray<TFHppleElement *> *) childrenWithTagName:(NSString *)tagName;
 
 // Returns the first child node whose tag name equals the given string
 // (comparison is performed with NSString's isEqualToString)
@@ -82,7 +82,7 @@ NS_ASSUME_NONNULL_BEGIN
 // Returns the children whose class equals the given string
 // (comparison is performed with NSString's isEqualToString)
 // Returns an empty array if no matching child is found
-- (NSArray *) childrenWithClassName:(NSString *)className;
+- (NSArray<TFHppleElement *> *) childrenWithClassName:(NSString *)className;
 
 // Returns the first child whose class requals the given string
 // (comparison is performed with NSString's isEqualToString)
@@ -98,7 +98,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (nullable NSString *) text;
 
 // Returns elements searched with xpath
-- (NSArray *) searchWithXPathQuery:(NSString *)xPathOrCSS;
+- (NSArray<TFHppleElement *> *) searchWithXPathQuery:(NSString *)xPathOrCSS;
 
 // Custom keyed subscripting
 - (nullable id)objectForKeyedSubscript:(id)key;
