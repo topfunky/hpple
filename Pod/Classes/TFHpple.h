@@ -29,8 +29,9 @@
 
 
 #import <Foundation/Foundation.h>
-
 #import "TFHppleElement.h"
+
+NS_ASSUME_NONNULL_BEGIN
 
 @interface TFHpple : NSObject 
 
@@ -48,10 +49,12 @@
 + (TFHpple *) hppleWithHTMLData:(NSData *)theData encoding:(NSString *)encoding;
 + (TFHpple *) hppleWithHTMLData:(NSData *)theData;
 
-- (NSArray *) searchWithXPathQuery:(NSString *)xPathOrCSS;
-- (TFHppleElement *) peekAtSearchWithXPathQuery:(NSString *)xPathOrCSS;
+- (NSArray<TFHppleElement *> *) searchWithXPathQuery:(NSString *)xPathOrCSS;
+- (nullable TFHppleElement *) peekAtSearchWithXPathQuery:(NSString *)xPathOrCSS;
 
 @property (nonatomic, readonly) NSData * data;
 @property (nonatomic, readonly) NSString * encoding;
 
 @end
+
+NS_ASSUME_NONNULL_END
